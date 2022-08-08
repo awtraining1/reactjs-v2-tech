@@ -1,0 +1,74 @@
+<html>
+<script>
+
+    function Person(){
+        this.name="Prakash";
+    }
+
+    function Car(){
+        this.name="Maruti";
+        this.color="red"
+    }
+
+    //Functions defined above can be used to create objects
+    let p = new Person();
+    p.name = "Jijo";
+
+    let car1 = new Car();
+    car1.name = "Mahindra";
+    car1.color="blue";
+
+    //Modern way of creating objects is through defining Classes first
+    class Employee{
+
+        constructor(){
+            this.name="Jolly";
+            this.age=23 
+        }
+
+    }
+
+    let emp1 = new Employee();
+    emp1.name="Sajji";
+    console.log(`Employee name is ${emp1.name}`);
+
+    // constructor with arguments 
+    class EmployeeV2{
+
+        constructor(n,age){
+            this.name=n;
+            this.age=age 
+        }
+
+    }
+
+    let emp2 = new EmployeeV2("Rajesh",102);
+    console.log(`Employee name is ${emp2.name}`);
+
+
+    // methods inside class 
+    class EmployeeV3{
+
+        constructor(n,age){
+            this.name=n;
+            this.age=age; 
+        }
+
+        talk() {
+            alert(`Hi I am ${this.name}`);
+            document.write(`Hi I am ${this.name}`);
+        }
+
+        
+    }
+
+    let emp3 = new EmployeeV3("Sajith",87);
+    emp3.talk();
+
+</script>
+
+TRY-PROB-1A: Write a JS class Fruit, that has 3 properties and atleast two
+methods.
+Demo this class usage.
+
+</html>

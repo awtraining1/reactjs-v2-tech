@@ -1,0 +1,36 @@
+<html>
+
+<script>
+var x= 12.1; // Global scope decl
+
+console.log("In script block x="+ x);
+
+function f1(){
+    var y= 100; // Local scope decl
+
+    console.log(" Inside f1 x=" + x);
+    console.log(" Inside f1 y=" + y);
+
+    for ( z=0;z<5;z++) {
+        //var z=25;
+        //console.log(" Inside f1 block x=" + x); // error? GOOD 
+        //console.log(" Inside f1 block y=" + y); // error? GOOD
+        console.log(" Inside f1 block z=" + z); // error? GOOD
+    }
+
+    console.log(" Inside f1 outside block z=" + z); // error? GOOD
+
+};
+
+f1();
+
+console.log("In script block after f1 call x="+ x);
+// console.log(" Outside f1 y=" + y); error
+
+</script>
+
+</html>
+
+NOTES: JS loosely typed language
+let type of decl  is blocked scope
+There is nothing like "block" scope for var type of variable decl

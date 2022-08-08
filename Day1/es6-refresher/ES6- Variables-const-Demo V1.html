@@ -1,0 +1,45 @@
+<html>
+
+<script>
+    const x = 19;
+    console.log(x);
+
+    x = 20; // ERROR because we cannot change a const decl variable
+
+</script>
+
+<script>
+    //Example 2
+    const y = "hello";
+    y = "world"; // ERROR
+</script>
+
+<script>
+    //Example 3
+    const z = new String("hello");
+    z = z.toUpperCase(); // ERROR because String object are IMMUTABLE
+
+</script>
+
+
+<script>
+    function Person(){
+        this.name="Prakash";
+    }
+
+    //Example 4
+    const p = new Person();
+    console.log(p.name);
+
+    p.name="Bala"; // GOOD because USER defined objects are MUTABLE
+    console.log(p.name);
+
+    p= new Person(); // ERROR because every time we use the new operator it creates a object in a new memory location
+    console.log(p.name);
+
+</script>
+
+</html>
+
+NOTES: JS loosely typed language
+let is blocked scope
