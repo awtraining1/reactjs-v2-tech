@@ -1,0 +1,71 @@
+<html>
+
+<script>
+    let arr1 = ["Manish", "Sajesh", "Mary", "Balaji"];
+
+    // Rest operator
+    //let arr2 =[ arr1[2], arr1[3] ]; // [arr1[974], ......, arr1[999] ]
+
+    let arr2 = [];
+    let arr2Index = 0;
+
+    for (let n = arr1.length - 2; n < arr1.length; n++) {
+        arr2[arr2Index] = arr1[n];
+        arr2Index++;
+    };
+
+    //document.write(arr2);
+
+    // Introducing the ... operator
+    let [a, b, ...arr2V2] = arr1;
+    document.write(`<br/> a= ${a}`);
+    document.write(`<br/> b = ${b}`);
+    document.write(`<br/> arr2V2 = ${arr2V2}`);
+
+    //TRY-PROB-2A : from the following array, find the sum of last 3 elements.
+    document.write(`<hr/>`);
+    let arr3 = [4, 5, 6, 23, 120];
+    let [a1, b1, ...arr3LastThree] = arr3;
+    let sum = 0;
+    for (let n1 = 0; n1 < arr3LastThree.length; n1++) {
+        sum = sum + arr3LastThree[n1];
+    }
+
+    document.write(`<br/> sum = ${sum}`);
+
+    //let [a2,b2, ...X, c2] = arr3; // Error: rest element may not have a trailing comma
+
+    // Spread operator ...
+    document.write(`<hr/> spread operator demo`);
+
+    function add(d1,d2,d3){
+        return d1+d2+d3;
+    }
+
+    //let result = add(arr3[2],arr3[3],arr3[4]);
+    let result = add(arr3LastThree[0],arr3LastThree[1],arr3LastThree[2]);
+    document.write(`<br/> Traditional way result = ${result}`);
+
+    let result1 = add(...arr3LastThree);
+    document.write(`<br/> Using ES6 result1 = ${result1}`);
+    
+    ////TRY-PROB-2B : write a function that accepts 2 args.
+    // for the array [3,4,5,6] use the above function that returns sum of first
+    // two elements of the array
+    document.write(`<hr/> spread operator PROB-2B demo <hr/>`);
+
+    function addV2(d1,d2){
+        return d1+d2;
+    }
+
+    let arr5 = [3,4,5,6];
+    let result2 = addV2(...arr5);
+    document.write(`<br/> Using ES6 result2 = ${result2}`);
+
+    let [z,...arr5_2toRemaining] = arr5; // arr5_2toRemaining will be 4,5,6
+    let result3 = addV2(...arr5_2toRemaining);
+    document.write(`<br/> Using ES6 result3 = ${result3}`);
+
+</script>
+
+</html>

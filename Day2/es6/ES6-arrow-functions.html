@@ -1,0 +1,35 @@
+<html>
+
+<script>
+function f1(arg1,arg2){
+
+}
+
+// Modern ES6 way (Arrow function)
+f2 = (arg1,arg2) => {
+    document.write(`<br/> welcome to arrow functions`);
+};
+
+f2(2,3);
+
+//TRY-PROB-2C :  Write an arrow function that does not accept any args and 
+// prints "Ind day is holiday"
+f3=()=>
+{
+    document.write(`</br>Ind day is holiday`);
+}
+f3();
+
+// when body is just one line, we can omit curly braces for body
+f4 = (arg1,arg2) => document.write(`<br/>In f4 welcome to arrow functions`);
+f4(2,4);
+
+// when body is just one line, and we are return something, no need write "return"
+let sum = (arg1,arg2) => arg1+arg2 ;
+
+let result  = sum(2,4);
+document.write(`<br/>sum of 2 and 4 is ${result}`);
+
+</script>
+
+</html>

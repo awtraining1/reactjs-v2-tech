@@ -1,0 +1,52 @@
+<html>
+
+<script>
+    class Person {
+        
+        constructor(name, age, ht) {
+            this.name = name;
+            this.age = age;
+            this.hieght = ht;
+        }
+    }
+</script>
+
+
+<script>
+    document.write(`<hr/> object destructuring demo <hr/>`);
+    // we can create objects using functions
+    // we can create objects using class definitions
+    // we can also create objects using object literals
+
+    let person1 = {
+        name: "Rafi",
+        age: 27,
+        hieght: 5.6
+    };
+
+    // document.write(`<br/> ${person1}`);
+
+    function printAge(person) {
+        document.write(`<br/> Traditional way person's name is ${person.name}`);
+    };
+
+    printAge(person1);// print the age of person1
+
+    let person2 = new Person("Parveen", 21, 5.7);
+    printAge(person2);
+
+    // Modern ES6 way
+    document.write(`<hr/>`);
+    function printAgeV2( { age } ) {
+        document.write(`<br/> Modern ES6 way person's age is ${age}`);
+    };
+
+    printAgeV2(person1);
+    printAgeV2(person2);
+
+// TRY-PROB-2C : write a function printAgeAndName that accepts 
+// 2 object destructured args. It should print both name and age.
+// call this function on a sample Person object.
+</script>
+
+</html>
