@@ -1,0 +1,6 @@
+notes.txt
+
+React requires that we put all component want render
+in a top level tag/component
+
+Contional Rendering using && operator
