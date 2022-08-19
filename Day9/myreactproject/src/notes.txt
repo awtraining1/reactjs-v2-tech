@@ -1,0 +1,22 @@
+notes.txt
+
+React requires that we put all component want render
+in a top level tag/component
+
+Contional Rendering using && operator
+
+Day 6
+-----
+Quick Recap of previous day
+
+class components
+JSX - babel transpiles into normal javascript 
+
+### Functions defined the normal way (See changeName() in Patient class
+need to bound to the this object in the constructor.
+Not neccesary to do so for arrow Functions  
+
+## props drilling
+
+Day 7
+------
