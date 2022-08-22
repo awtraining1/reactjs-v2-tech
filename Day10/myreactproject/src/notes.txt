@@ -1,0 +1,63 @@
+notes.txt
+
+React requires that we put all component want render
+in a top level tag/component
+
+Contional Rendering using && operator
+
+Day 6
+-----
+Quick Recap of previous day
+
+class components
+JSX - babel transpiles into normal javascript 
+
+### Functions defined the normal way (See changeName() in Patient class
+need to bound to the this object in the constructor.
+Not neccesary to do so for arrow Functions  
+
+## props drilling
+
+Day 10
+------
+Quick recap of Day 9
+Events- any html element can generate Events
+
+<p  onclick="f1()" ></p>
+
+if not passing any arguments:
+<p  onClick={f1} ></p>
+
+if passing any arguments:
+<p  onClick={ () => f1('hello') } ></p>
+<p  onClick={ (a,b) => f1(a,b) } ></p>
+
+<p  onClick={ (event) => f1('hello', 6,  event) } ></p>
+
+f1 = (str, a,  evt) => {
+    evt.type - Change, Focus, Mouse, Key, Scroll
+    evt.target - Input, Paragraph, Button, 
+    evt.target.id - 
+    evt.target.value - applicable for form input elements.
+}
+
+Day 10
+Refs
+Forms
+
+<p id="p1"> some para </p>
+
+<form name="form1">
+<input id="t1" name="t1"  type="text" value="type something"> 
+</form>
+
+<script>
+
+let para1 = document.getElementById("p1");
+para1.innerHTML = "some other para";
+
+let text1Value = document.forms["form1"].t1.value;
+
+</script>
+
+Uncontrolled components
