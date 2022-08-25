@@ -1,0 +1,120 @@
+notes.txt
+
+React requires that we put all component want render
+in a top level tag/component
+
+Contional Rendering using && operator
+
+Day 6
+-----
+Quick Recap of previous day
+
+class components
+JSX - babel transpiles into normal javascript 
+
+### Functions defined the normal way (See changeName() in Patient class
+need to bound to the this object in the constructor.
+Not neccesary to do so for arrow Functions  
+
+## props drilling
+
+Day 10
+------
+Quick recap of Day 9
+Events- any html element can generate Events
+
+<p  onclick="f1()" ></p>
+
+if not passing any arguments:
+<p  onClick={f1} ></p>
+
+if passing any arguments:
+<p  onClick={ () => f1('hello') } ></p>
+<p  onClick={ (a,b) => f1(a,b) } ></p>
+
+<p  onClick={ (event) => f1('hello', 6,  event) } ></p>
+
+f1 = (str, a,  evt) => {
+    evt.type - Change, Focus, Mouse, Key, Scroll
+    evt.target - Input, Paragraph, Button, 
+    evt.target.id - 
+    evt.target.value - applicable for form input elements.
+}
+
+Day 10
+Refs
+Forms
+
+<p id="p1"> some para </p>
+
+<form name="form1">
+<input id="t1" name="t1"  type="text" value="type something"> 
+</form>
+
+<script>
+
+let para1 = document.getElementById("p1");
+para1.innerHTML = "some other para";
+
+let text1Value = document.forms["form1"].t1.value;
+
+</script>
+
+Uncontrolled components
+
+Day 11
+------
+Quick Recap
+
+11B Add a Footer component that will always show at the bottom
+
+
+Day 12
+------
+Quick Recap
+React Routing
+
+http://localhost:3000/patient
+http://localhost:3000/patients/bahubali
+
+http://localhost:3000/doctors
+http://localhost:3000/doctors/1
+http://localhost:3000/doctors/2
+http://localhost:3000/doctors/100
+
+http://localhost:3000/doctors/sassa - Some fall back component
+
+Navlink
+
+
+Day 13
+Quick Recap of D12
+Route paths can accept dynamic path values
+we define them with a colon as below
+
+http://localhost:3000/doctors/:id/:name (See App.js for example)
+
+
+let {id,name} = useParams();
+
+
+Search Parameters (Request parameters)
+https://localhost:3000/room?roomNo=7&days=5
+
+let [abc] = useSearchParams();
+
+abc.get("roomNo")
+abc.get("days")
+
+Testing
+getByText
+getByRole
+user events library for click, type, checked simulation
+Jest snapshot test
+Enzyme - explore this
+
+useEffect hook (Illustrated in UseEffectDemo.js)
+- will get called everytime render/update happens
+    - means it acts like "componentDidMount" method in class Component
+- will get called once before the Functional component renders
+    - means it acts like "componentWillMount" method in class Component
