@@ -1,0 +1,30 @@
+assignment.txt
+
+5A Create another function f2 and pass this function as a prop
+to User component. Test it out 
+
+5B Develop the required components and render them as
+<Patient name age>
+            <XRay title="Chest" dated="..." picture="" />
+            <XRay title="Spinal" dated="..." picture=""/>
+</Patient>
+
+6A PROBLEM Complete the OutPatient class component along with PatientCard.
+Include the feature to add a new Identification mark to the existing marks.
+
+addIdentificationMark
+removeIdentificationMark
+
+6B
+
+// 8A initiate a timer in componentDidMount that will show/update
+    // a message "Attending patient no <somenumber>"
+    // In componentWillUnmount, clear this timer.
+
+    // 8B initiate a timer in componentDidMount that will show/update
+    // a message "Attending patient  <some patient name from patients array>"
+    // In componentWillUnmount, clear this timer.
+    
+// 8C Develop an Admin Functional Component
+
+//15A In the Counter.js, add the Decrement counter functionality
