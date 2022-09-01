@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Room Test Case 2 Snapshot Testing 1`] = `
+<div
+  style={
+    Object {
+      "border": "5px solid green",
+    }
+  }
+>
+  <center>
+    <img
+      height="120"
+      src="https://cf.bstatic.com/xdata/images/hotel/270x200/269800030.jpg?k=8567acf226206bb28c9ff263d1c1934b462fecbb0d1bd360b85c2c59016585a4&o="
+      width="200"
+    />
+  </center>
+  Booking Room NUMBER
+  <input
+    name="noOfdays"
+    onChange={[Function]}
+    type="text"
+    value={0}
+  />
+</div>
+`;
